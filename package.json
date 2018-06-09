@@ -1,0 +1,22 @@
+{
+  "name": "mean-application",
+  "version": "1.0.0",
+  "description": "Mean Stack Example:",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jitesh23/mean-application.git"
+  },
+  "author": "Jitesh Powankar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jitesh23/mean-application/issues"
+  },
+  "homepage": "https://github.com/Jitesh23/mean-application#readme",
+  "dependencies": {
+    "express": "~4.8.8"
+  }
+}
