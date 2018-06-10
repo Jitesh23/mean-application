@@ -15,7 +15,7 @@ exports.create = function(req, res, next){
 
 exports.list = function(req, res, next){
 
-  User.find({}, 'username email', function(err, users){
+  User.find({}, function(err, users){
     if(err){
       next(err);
     }else {
