@@ -1,13 +1,17 @@
 exports.render = function(req, res) {
 
-if (req.session.lastVisit){
-  console.log(req.session.lastVisit);
-}
+  res.render('index', {
+    title: 'Hello World',
+    userFullName: req.user ? req.user.fullName : ''
+  });
 
-req.session.lastVisit = new Date();
 
-res.render('index', {
-  title: 'Jitesh Powankar'
-});
+
+// if (req.session.lastVisit){
+//   console.log(req.session.lastVisit);
+// }
+//
+// req.session.lastVisit = new Date();
+
 
 };
