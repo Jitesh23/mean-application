@@ -18,14 +18,18 @@ app.route('/signin')
 app.route('/signout')
   .get(users.signout);
 
-  app.get('/oauth/facebook', passport.authenticate('facebook', {
+  app.get('/oauth/facebook', passport.authenticate('facebook',{
   failureRedirect: '/signin'
-  }));
+},{ scope: [ 'email' ] }
+));
   app.get('/oauth/facebook/callback', passport.authenticate('facebook',
   {
   failureRedirect: '/signin',
   successRedirect: '/'
-  }));
+},{
+  scope: [ 'email' ]
+}
+));
 
 app.route('/users')
   .post(users.create)
